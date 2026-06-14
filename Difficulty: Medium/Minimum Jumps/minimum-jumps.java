@@ -1,6 +1,6 @@
 class Solution {
     public int minJumps(int[] arr) {
-        if(arr[0] == 0)return -1;
+
         int r = 0;
         int l = 0;
         int jumps = 0;
@@ -9,7 +9,7 @@ class Solution {
             for(int i =l;i<=r;i++){
                far = Math.max(far,i+arr[i]);
             }
-            if(far<r){
+            if(far<=r){
                 return -1;
             }
             l = r+1;
